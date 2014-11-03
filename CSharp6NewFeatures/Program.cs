@@ -13,8 +13,6 @@ namespace CSharp6NewFeatures
     {
         static void Main(string[] args)
         {
-            static void Main(string[] args)
-        {
                 WriteLine("Hello world!");
 
                 WriteLine();
