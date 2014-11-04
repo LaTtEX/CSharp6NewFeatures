@@ -13,62 +13,62 @@ namespace CSharp6NewFeatures
     {
         static void Main(string[] args)
         {
-                WriteLine("Hello world!");
+            WriteLine("Hello world!");
 
-                WriteLine();
+            WriteLine();
 
-                var blankPerson = new Person();
+            var blankPerson = new Person();
 
-                WriteLine(blankPerson.FirstName);
-                WriteLine(blankPerson.LastName);
-                WriteLine(blankPerson.BirthDate);
+            WriteLine(blankPerson.FirstName);
+            WriteLine(blankPerson.LastName);
+            WriteLine(blankPerson.BirthDate);
 
-                WriteLine(blankPerson.OtherInformation);
+            WriteLine(blankPerson.OtherInformation);
 
-                WriteLine();
+            WriteLine();
 
-                //Dictionary initializers
-                var madlangPeople = new Dictionary<string, Person>
-                {
-                    ["Jon"] = new Person("Jon", "Limjap", new DateTime(1990, 11, 23)),
-                    ["Toto"] = new Person("Toto", "Gamboa", new DateTime(1996, 7, 11)),
-                    ["Teril"] = new Person("Teril", "Bilog", new DateTime(1998, 7, 10))
-                };
+            //Dictionary initializers
+            var madlangPeople = new Dictionary<string, Person>
+            {
+                ["Jon"] = new Person("Jon", "Limjap", new DateTime(1990, 11, 23)),
+                ["Toto"] = new Person("Toto", "Gamboa", new DateTime(1996, 7, 11)),
+                ["Teril"] = new Person("Teril", "Bilog", new DateTime(1998, 7, 10))
+            };
 
-                WriteLine(madlangPeople["Jon"].FirstName);
-                WriteLine(madlangPeople["Toto"].LastName);
-                WriteLine(madlangPeople["Teril"].BirthDate);
+            WriteLine(madlangPeople["Jon"].FirstName);
+            WriteLine(madlangPeople["Toto"].LastName);
+            WriteLine(madlangPeople["Teril"].BirthDate);
 
-                WriteLine();
+            WriteLine();
 
-                WriteLine(madlangPeople["Jon"].FirstName + "'s age is " + madlangPeople["Jon"].Age);
+            WriteLine(madlangPeople["Jon"].FirstName + "'s age is " + madlangPeople["Jon"].Age);
 
-                var sept11 = new DateTime(2001, 9, 11);
+            var sept11 = new DateTime(2001, 9, 11);
 
-                WriteLine(madlangPeople["Jon"].FirstName + "'s age on " + sept11 + " is " + madlangPeople["Jon"].AgeFrom(sept11));
+            WriteLine(madlangPeople["Jon"].FirstName + "'s age on " + sept11 + " is " + madlangPeople["Jon"].AgeFrom(sept11));
 
-                WriteLine();
+            WriteLine();
 
-                FilteredExceptions("Filter me!");
-                FilteredExceptions("blahblahblah");
+            FilteredExceptions("Filter me!");
+            FilteredExceptions("blahblahblah");
 
-                WriteLine();
+            WriteLine();
 
-                var jon1 = new Person();
-                var jon2 = new Person() { Address = new Address { AddressLine1 = "6750 Ayala Ave" } };
+            var jon1 = new Person();
+            var jon2 = new Person() { Address = new Address { AddressLine1 = "6750 Ayala Ave" } };
 
-                //Null operator propagation
-                WriteLine(jon1?.Address?.AddressLine1 ?? "No address");
-                WriteLine(jon2?.Address?.AddressLine1 ?? "No address too");
-                WriteLine(jon2?.Address?.AddressLine2 ?? "No address either");
+            //Null operator propagation
+            WriteLine(jon1?.Address?.AddressLine1 ?? "No address");
+            WriteLine(jon2?.Address?.AddressLine1 ?? "No address too");
+            WriteLine(jon2?.Address?.AddressLine2 ?? "No address either");
 
-                WriteLine();
+            WriteLine();
 
-                //nameof operator
-                WriteLine(nameof(FilteredExceptions));
+            //nameof operator
+            WriteLine(nameof(FilteredExceptions));
 
-                ReadKey();
-            }
+            ReadKey();
+        }
 
         //Filtered exceptions
         public static void FilteredExceptions(string message)

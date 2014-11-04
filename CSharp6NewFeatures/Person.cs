@@ -14,13 +14,17 @@ namespace CSharp6NewFeatures
         public DateTime BirthDate { get; set; } = new DateTime(1898, 6, 12);
 
         //Get-only (read-only) auto properties
+        public string AnotherInformation { get; }
+
+        //Get-only (read-only) auto properties with initializer
         public string OtherInformation { get; } = "Other information";
 
         public Address Address { get; set; }
 
         public Person()
         {
-
+            //Initialize get-only property inside constructor
+            AnotherInformation = "Initialize here";
         }
 
         public Person(string firstname, string lastname, DateTime datetime)
