@@ -21,6 +21,8 @@ namespace CSharp6NewFeatures
 
         public Address Address { get; set; }
 
+        public override string ToString() => "\{FirstName} \{LastName}";
+
         public Person()
         {
             //Initialize get-only property inside constructor

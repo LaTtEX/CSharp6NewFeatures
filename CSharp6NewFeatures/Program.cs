@@ -41,6 +41,10 @@ namespace CSharp6NewFeatures
 
             WriteLine();
 
+            madlangPeople.Values.ToList().ForEach(p => WriteLine(p));
+
+            WriteLine();
+
             WriteLine(madlangPeople["Jon"].FirstName + "'s age is " + madlangPeople["Jon"].Age);
 
             var sept11 = new DateTime(2001, 9, 11);
